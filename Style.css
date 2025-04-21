@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-no {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.table-no input {
+  padding: 8px;
+  width: 150px;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* Print & Clear Bill buttons */
+.print-btn {
+  margin-top: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.clear-btn {
+  background: #f44336;
+  margin-left: 5px;
+}
+.clear-btn:hover {
+  background: #d32f2f;
+}
+
+/* Remove‑item button */
+.clear-item-btn {
+  background: #f0ad4e;
+  color: white;
+  margin: 0 2px;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.clear-item-btn:hover {
+  background: #ec971f;
+}
+
+.bill {
+  margin-top: 30px;
+  animation: fadeIn 0.4s ease;
+}
+
+.bill h3 {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+.bill table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bill th, .bill td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.bill th {
+  background: #eee;
+}
+
+.bill .total {
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* PRINT STYLES */
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area {
+    position: absolute; top: 0; left: 0; width: 100%;
+  }
+}
